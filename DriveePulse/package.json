@@ -1,0 +1,22 @@
+{
+  "name": "drivee-pulse",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Unified ML-powered price optimization platform for taxi",
+  "scripts": {
+    "dev": "concurrently --kill-others --names \"API,WEB\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run backend\" \"npm run web\"",
+    "web": "cd app && npm run dev",
+    "backend": "cd backend && python api.py",
+    "build": "cd app && npm run build",
+    "install:all": "npm install && cd app && npm install",
+    "clean": "rimraf app/dist app/node_modules node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

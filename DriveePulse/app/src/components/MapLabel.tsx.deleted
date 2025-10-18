@@ -1,0 +1,41 @@
+// backup of MapLabel before deletion
+import React, { memo } from 'react';
+import './MapLabel.css';
+
+interface MapLabelProps {
+  text: string;
+  x: number;
+  y: number;
+  type?: 'primary' | 'secondary';
+  isVisible?: boolean;
+}
+
+const MapLabel: React.FC<MapLabelProps> = memo(({
+  text,
+  x,
+  y,
+  type = 'primary',
+  isVisible = true
+}) => {
+  return (
+    <div
+      className={`map-label ${type} ${isVisible ? 'visible' : ''}`}
+      style={{
+        transform: `translate(${Math.round(x)}px, ${Math.round(y)}px)`,
+        willChange: 'transform, opacity'
+      }}
+    >
+      <span className="label-text">{text}</span>
+    </div>
+  );
+}, (prevProps, nextProps) => {
+  return prevProps.text === nextProps.text &&
+         Math.abs(prevProps.x - nextProps.x) < 1 &&
+         Math.abs(prevProps.y - nextProps.y) < 1 &&
+         prevProps.type === nextProps.type &&
+         prevProps.isVisible === nextProps.isVisible;
+});
+
+MapLabel.displayName = 'MapLabel';
+
+export default MapLabel;

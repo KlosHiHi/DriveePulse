@@ -1,0 +1,111 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+coverage/
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Build outputs
+apps/*/dist/
+apps/*/build/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+.cache/
+
+# Local demo data
+predictions.csv
+
+# Documentation and reports (exclude all .md except README.md)
+*.md
+!README.md
+# Allow specific documentation if needed in the future:
+# !docs/API.md
+# !docs/ARCHITECTURE.md
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# ML models (keep only main model)
+*.pkl
+!src/model.pkl
+*.h5
+*.hdf5
+*.pb
+*.onnx
+
+# Data files (except reference training data)
+*.csv
+!referense/train.csv
+*.xlsx
+*.xls
+
+# JSON configs (allow package.json and tsconfig)
+*.json
+!package.json
+!**/package.json
+!tsconfig*.json
+!vite.config.ts
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Backup files
+*.bak
+*.backup
