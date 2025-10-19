@@ -92,7 +92,7 @@ predictions.csv
 
 # Data files (except reference training data)
 *.csv
-!referense/train.csv
+!*/referense/train.csv
 *.xlsx
 *.xls
 
