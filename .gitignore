@@ -68,7 +68,6 @@ Thumbs.db
 .cache/
 
 # Local demo data
-!predictions.csv
 
 # Documentation and reports (exclude all .md except README.md)
 *.md
@@ -93,6 +92,7 @@ Thumbs.db
 # Data files (except reference training data)
 *.csv
 !*/referense/train.csv
+!predictions.csv
 *.xlsx
 *.xls
 
