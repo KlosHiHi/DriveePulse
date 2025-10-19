@@ -68,7 +68,7 @@ Thumbs.db
 .cache/
 
 # Local demo data
-predictions.csv
+!predictions.csv
 
 # Documentation and reports (exclude all .md except README.md)
 *.md
