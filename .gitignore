@@ -83,7 +83,7 @@ Thumbs.db
 
 # ML models (keep only main model)
 *.pkl
-!src/model.pkl
+!*/src/model.pkl
 *.h5
 *.hdf5
 *.pb
